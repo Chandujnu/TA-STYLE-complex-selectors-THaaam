@@ -1,0 +1,466 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* My Reset */
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+
+/* Variables */
+:root {
+    --primary: rgb(89,191,194);
+    --secondary: rgb(255,255,255);
+    --textblue: rgb(39,62,125);
+    --lightgrey: rgb(105,108,115);
+}
+/* General Style */
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.item-start {
+    align-items: flex-start;
+}
+.item-center {
+    align-items: center;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.column {
+    flex-direction: column;
+}
+.padding{
+    padding: 1.5rem 0;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* columns */
+.flex-15 {
+    flex: 0 1 15%;
+}
+.flex-20 {
+    flex: 0 1 20%;
+}
+.flex-25 {
+    flex: 0 1 25%;
+}
+.flex-23 {
+    flex: 0 1 23%;
+}
+.flex-30 {
+    flex: 0 1 30%;
+}
+.flex-40 {
+    flex: 0 1 40%;
+}
+.grow {
+    flex: 1 1 auto;
+}
+
+/* Txts */
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-left {
+    text-align: left;
+}
+
+/* Custom */
+header {
+    background-color: var(--primary);
+    height: 30rem;
+    padding-top: 1rem;
+    width: 100%;
+    position: relative;
+}
+
+header a {
+    color: var(--secondary);
+    font-weight: 600;
+}
+li {
+    padding-left: 1rem;
+    font-size: 1.2rem;
+}
+.brand {
+    font-size: 2rem;
+}
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
+.hero-heading {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 5rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.btn {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.4rem;
+    color: var(--textblue);
+    font-weight: 600;
+    font-size: 1rem;
+}
+.hero-image {
+    margin-top: 10rem;
+    box-shadow: 1px 3rem 1rem rgb(202, 196, 196);
+    width: 100%;
+    height: 100%;
+}
+.hero-files a {
+    color: rgb(143,156,186);
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-left: 1rem;
+}
+.hero-files {
+    padding: 5rem 0;
+}
+.line {
+    border: 1px solid rgb(165, 164, 164);
+    margin: 3rem 0;
+}
+article {
+    color: var(--textblue);
+    text-align: left;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+div > p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--lightgrey);  
+    padding: 1rem 0; 
+}
+.learn-btn {
+    font-size: 1.2rem;
+    background-color: var(--primary);
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    display: inline-block;
+    margin-top: 15px;
+}
+.sudoArrow {
+    position: relative;
+}
+.learn-btn::before{
+    content: "ldkjfg";
+    font-size: 0;
+    top: -6px;
+    left: -40px;
+    position: absolute;
+    color: green;
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 21px solid var(--primary);
+    border-left: 40px solid transparent;
+    border-bottom: 21px solid var(--primary);
+}
+.learn-btn::after{
+    content: "ldkjfg";
+    right: -35px;
+    top: -6px;
+    background-color: white;
+    font-size: 0;
+    margin-left: 10px;
+    border-top: 21px solid transparent;
+    position: absolute;
+    border-left: 35px solid var(--primary);
+    border-bottom: 21px solid transparent;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid rgb(194, 183, 183);
+
+}
+caption {
+    color: var(--textblue);
+}
+th, td {
+    border-bottom: 1px solid rgb(194, 183, 183);
+    padding: 1rem 1rem;
+    /* text-align: left; */
+}
+td {
+    border-right: 1px solid rgb(194, 183, 183);
+    color: var(--lightgrey);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+tr th {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+}
+tr:nth-child(odd) {
+    background-color: rgb(213,229,229);
+}
+table caption{
+    font-size: 2rem;
+    font-weight: 700;
+}
+div  h3 {   
+    color: var(--textblue);
+    font-size: 2rem;
+    font-weight: 600;
+    padding-top: 2rem;
+}
+.sub-btn {
+    border: none;
+    border-radius: 1.2rem;
+    background-color: rgb(187,236,236);
+    padding: 1rem 2.5rem;
+}
+.subscription {
+    border: 4px solid rgb(232,238,251);
+    border-radius: 1rem;
+    /* box-sizing: content-box; */
+}
+p small{
+    color: var(--textblue);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 1px rgb(91, 81, 140);
+}
+div > small {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 2rem;
+}
+small~ strong {
+    color: var(--primary);
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+p ~ button {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    border: none;
+    margin: 1.5rem 0;
+    background-color: var(--primary);
+    color: var(--secondary);
+}
+article > h2 {
+    margin-top: 5rem;
+}
+.trial {
+    background-color: var(--primary);
+    border-radius: 1rem;
+}
+.trial strong {
+    margin: 3rem 0;
+    color: var(--secondary);
+    font-size: 2rem;
+    font-weight: 600;
+}
+strong ~ button {
+    border: none;
+    padding: 1rem 4rem;
+    border-radius: 0.5rem;
+    color: var(--textblue);
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+}
+footer {
+    color: rgb(144,160,194);
+}
+footer p {
+    color: rgb(144,160,194);
+}footer a{
+    color: rgb(144,160,194);
+}
+
+
+/* ---Responsive--- */
+@media screen and (max-width: 1100px) {
+    .container {
+        max-width: 900px;
+        width: 100%;
+    }
+    html {
+        font-size: 12px;
+    }
+    .flex-100 {
+        flex: 0 1 100%;
+    }
+    .flex-47 {
+        flex: 0 1 47%;
+    }
+    .med-wrap {
+        flex-wrap: wrap;
+    }
+    .med-column {
+        flex-direction: column;
+    }
+    .margin-top {
+        margin-top: 2rem;
+    }
+    .margin-bottom {
+        margin-bottom: 2rem;
+    }
+    .med-center {
+        text-align: center;
+    }
+    header {
+        width: 100%;
+    }
+    .graph-img img {
+        width: 100%;
+    }
+    .hero-files {
+        width: 100%;
+    }
+    .learn-btn {
+        margin: 1rem 0;
+    }
+    .learn-btn::before{
+        content: "ldkjfg";
+        font-size: 0;
+        top: -8px;
+        left: -40px;
+        position: absolute;
+        color: green;
+        width: 0;
+        height: 0;
+        display: block;
+        border-top: 17px solid var(--primary);
+        border-left: 40px solid transparent;
+        border-bottom: 17px solid var(--primary);
+    }
+    .learn-btn::after{
+        content: "ldkjfg";
+        right: -35px;
+        top: -8px;
+        background-color: white;
+        font-size: 0;
+        margin-left: 10px;
+        border-top: 17px solid transparent;
+        position: absolute;
+        border-left: 35px solid var(--primary);
+        border-bottom: 17px solid transparent;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 650px;
+        width: 100%;
+    }
+    html {
+        font-size: 10px;
+    }
+    .graph-img img {
+        width: 100%;
+    }
+    .hero-files {
+        width: 100%;
+    }
+}
